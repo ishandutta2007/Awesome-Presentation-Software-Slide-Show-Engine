@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="340">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="45%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Card Gradient -->
+    <linearGradient id="card-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Ambient Glow -->
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1.5deg); }
+    }
+    @keyframes floatMedium {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(-2deg); }
+    }
+    @keyframes pulsePulse {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.08); }
+    }
+    .floating-card-1 {
+      animation: floatSlow 7s ease-in-out infinite;
+      transform-origin: 980px 150px;
+    }
+    .floating-card-2 {
+      animation: floatMedium 9s ease-in-out infinite;
+      transform-origin: 920px 240px;
+    }
+    .pulse-glow {
+      animation: pulsePulse 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .grid-lines {
+      stroke: #334155;
+      stroke-width: 0.5;
+      stroke-opacity: 0.35;
+    }
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .desc-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+    }
+  </style>
+
+  <!-- Base Background -->
+  <rect width="1200" height="340" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Ambient Glow Backgrounds -->
+  <circle cx="200" cy="60" r="180" fill="url(#glow-grad)" class="pulse-glow" />
+  <circle cx="1050" cy="280" r="220" fill="url(#glow-grad)" class="pulse-glow" style="animation-delay: -3s;" />
+
+  <!-- Background Decorative Grid -->
+  <g class="grid-lines">
+    <line x1="60" y1="0" x2="60" y2="340" />
+    <line x1="180" y1="0" x2="180" y2="340" />
+    <line x1="300" y1="0" x2="300" y2="340" />
+    <line x1="420" y1="0" x2="420" y2="340" />
+    <line x1="540" y1="0" x2="540" y2="340" />
+    <line x1="660" y1="0" x2="660" y2="340" />
+    <line x1="780" y1="0" x2="780" y2="340" />
+    <line x1="900" y1="0" x2="900" y2="340" />
+    <line x1="1020" y1="0" x2="1020" y2="340" />
+    <line x1="1140" y1="0" x2="1140" y2="340" />
+    
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="220" x2="1200" y2="220" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Dynamic Background Animated Elements (Offset to Right & Rear) -->
+  <g class="floating-card-1">
+    <!-- Slide Card Preview Mockup -->
+    <rect x="840" y="40" width="280" height="170" rx="14" fill="url(#card-grad-1)" stroke="#475569" stroke-width="1.5" filter="url(#drop-shadow)" />
+    <rect x="840" y="40" width="280" height="28" rx="14" fill="#1e293b" />
+    <circle cx="860" cy="54" r="5" fill="#ef4444" />
+    <circle cx="876" cy="54" r="5" fill="#eab308" />
+    <circle cx="892" cy="54" r="5" fill="#22c55e" />
+    <rect x="860" y="85" width="130" height="14" rx="4" fill="#38bdf8" opacity="0.9" />
+    <rect x="860" y="110" width="220" height="8" rx="3" fill="#94a3b8" opacity="0.6" />
+    <rect x="860" y="126" width="180" height="8" rx="3" fill="#94a3b8" opacity="0.5" />
+    <rect x="860" y="142" width="140" height="8" rx="3" fill="#94a3b8" opacity="0.4" />
+    <rect x="860" y="166" width="70" height="20" rx="6" fill="#6366f1" opacity="0.8" />
+    <rect x="940" y="166" width="70" height="20" rx="6" fill="#334155" opacity="0.8" />
+  </g>
+
+  <g class="floating-card-2">
+    <!-- Code / Markdown Card Mockup -->
+    <rect x="760" y="150" width="250" height="145" rx="12" fill="#090d16" stroke="#6366f1" stroke-width="1.5" stroke-opacity="0.6" filter="url(#drop-shadow)" />
+    <rect x="780" y="175" width="80" height="10" rx="3" fill="#c084fc" />
+    <rect x="780" y="196" width="190" height="7" rx="3" fill="#64748b" />
+    <rect x="780" y="211" width="150" height="7" rx="3" fill="#64748b" />
+    <rect x="800" y="230" width="120" height="7" rx="3" fill="#38bdf8" />
+    <rect x="800" y="245" width="100" height="7" rx="3" fill="#4ade80" />
+    <rect x="780" y="265" width="60" height="12" rx="4" fill="#ec4899" opacity="0.8" />
+  </g>
+
+  <!-- Foreground Main Branding & Typography (Guaranteed Visible and Unhidden) -->
+  <g id="foreground-content" transform="translate(70, 0)">
+    <!-- Topic Badges / Pills -->
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="130" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      <text x="65" y="18" fill="#38bdf8" font-size="12" font-weight="600" font-family="sans-serif" text-anchor="middle">✨ AWESOME LIST</text>
+      
+      <rect x="140" y="0" width="165" height="28" rx="14" fill="#1e293b" stroke="#818cf8" stroke-width="1" />
+      <text x="222" y="18" fill="#818cf8" font-size="12" font-weight="600" font-family="sans-serif" text-anchor="middle">📊 PRESENTATION TECH</text>
+
+      <rect x="315" y="0" width="135" height="28" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1" />
+      <text x="382" y="18" fill="#c084fc" font-size="12" font-weight="600" font-family="sans-serif" text-anchor="middle">🚀 2026 EDITION</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="132" fill="#ffffff" font-size="38" class="title-text" filter="url(#drop-shadow)">
+      Presentation Software &amp;
+    </text>
+    <text x="0" y="180" fill="url(#grad-accent)" font-size="42" class="title-text" filter="url(#drop-shadow)">
+      Slide Show Engine Ecosystem
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="222" fill="#cbd5e1" font-size="16" class="desc-text">
+      Curated Landscape of Next-Gen Presentation Platforms, SaaS Suites &amp; Open-Source Engines
+    </text>
+
+    <!-- Interactive Ecosystem Pillars -->
+    <g transform="translate(0, 256)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="145" height="36" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+        <circle cx="18" cy="18" r="6" fill="#38bdf8" />
+        <text x="32" y="23" fill="#f1f5f9" font-size="13" font-family="sans-serif" font-weight="600">Markdown Slides</text>
+      </g>
+      <g transform="translate(155, 0)">
+        <rect x="0" y="0" width="145" height="36" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+        <circle cx="18" cy="18" r="6" fill="#818cf8" />
+        <text x="32" y="23" fill="#f1f5f9" font-size="13" font-family="sans-serif" font-weight="600">HTML5 &amp; WebGL</text>
+      </g>
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="155" height="36" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+        <circle cx="18" cy="18" r="6" fill="#c084fc" />
+        <text x="32" y="23" fill="#f1f5f9" font-size="13" font-family="sans-serif" font-weight="600">LaTeX / Typst Decks</text>
+      </g>
+      <g transform="translate(475, 0)">
+        <rect x="0" y="0" width="140" height="36" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+        <circle cx="18" cy="18" r="6" fill="#4ade80" />
+        <text x="32" y="23" fill="#f1f5f9" font-size="13" font-family="sans-serif" font-weight="600">Terminal TUI Decks</text>
+      </g>
+    </g>
+  </g>
+</svg>
